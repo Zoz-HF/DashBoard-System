@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>948</width>
+    <height>578</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(6, 17, 60);
+color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton_students">
+        <property name="styleSheet">
+         <string notr="true">COLOR:white;
+font: 20pt &quot;Optima&quot;;
+</string>
+        </property>
+        <property name="text">
+         <string> Students</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/img/student-2.png</normaloff>:/img/student-2.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_professors">
+        <property name="styleSheet">
+         <string notr="true">COLOR:white;
+font: 20pt &quot;Optima&quot;;
+</string>
+        </property>
+        <property name="text">
+         <string> Professors</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/img/teach.png</normaloff>:/img/teach.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_courses">
+        <property name="styleSheet">
+         <string notr="true">COLOR:white;
+font: 20pt &quot;Optima&quot;;
+</string>
+        </property>
+        <property name="text">
+         <string> Courses</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/img/books.png</normaloff>:/img/books.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget_main">
+      <property name="statusTip">
+       <string/>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #06113C;</string>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Tab 1</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Tab 2</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>948</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Optima</family>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="menufile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuexport_to_csv">
+     <property name="title">
+      <string>export to csv</string>
+     </property>
+     <property name="toolTipsVisible">
+      <bool>true</bool>
+     </property>
+     <addaction name="actionstudents"/>
+     <addaction name="actionprofessors"/>
+     <addaction name="actioncourses"/>
+    </widget>
+    <widget class="QMenu" name="menuimport_from_csv">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="title">
+      <string>import from csv</string>
+     </property>
+     <addaction name="actionstudents_2"/>
+     <addaction name="actionprofessors_2"/>
+     <addaction name="actioncourses_2"/>
+    </widget>
+    <addaction name="menuexport_to_csv"/>
+    <addaction name="menuimport_from_csv"/>
+   </widget>
+   <addaction name="menufile"/>
+  </widget>
+  <action name="actionstudents">
+   <property name="text">
+    <string>students</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S, Ctrl+1</string>
+   </property>
+  </action>
+  <action name="actionprofessors">
+   <property name="text">
+    <string>professors</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S, Ctrl+2</string>
+   </property>
+  </action>
+  <action name="actioncourses">
+   <property name="text">
+    <string>courses</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S, Ctrl+3</string>
+   </property>
+  </action>
+  <action name="actionstudents_2">
+   <property name="text">
+    <string>students</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O, Ctrl+1</string>
+   </property>
+  </action>
+  <action name="actionprofessors_2">
+   <property name="text">
+    <string>professors</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O, Ctrl+2</string>
+   </property>
+  </action>
+  <action name="actioncourses_2">
+   <property name="text">
+    <string>courses</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O, Ctrl+3</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
